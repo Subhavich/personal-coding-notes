@@ -93,6 +93,7 @@ colors=e1e7eb-070a0b-a0bdcb-365c6f-6ea4c0&fonts=Poppins-Poppins */
 .flow > * + * {
   margin-top: var(--flow-space, 1em);
 }
+
 .flow-left > * + * {
   margin-left: var(--flow-space, 1em);
 }
@@ -186,20 +187,25 @@ p {
   padding: 1em;
 }
 .container-block-outline {
-  padding: 1rem;
+  margin-top: 2rem;
+  padding: 2rem 8.3vw;
   border-radius: 1rem;
   background-image: radial-gradient(
     circle at center,
-    var(--clr-secondary) 20%,
-    transparent 20%
+    var(--clr-secondary) 30%,
+    transparent 40%
   );
-  background-size: 8px 8px;
+  background-size: 6px 6px;
 }
 
 .cluster {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+.cluster .btn {
+  background-color: var(--clr-background);
+  color: var(--clr-primary);
 }
 
 /* === HEADER === */

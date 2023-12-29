@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css?family=Gantari:700|Ubuntu%20Mono:400");
+
+/* --- RESET --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* --- ROOT --- */
+
+/* https://www.realtimecolors.com/?
+colors=e1e7eb-070a0b-a0bdcb-365c6f-6ea4c0&fonts=Poppins-Poppins */
+
+:root {
+  --clr-text: hsl(202, 22%, 10%);
+  --clr-text-light: hsl(202, 22%, 90%);
+  --clr-background: hsl(195, 20%, 96%);
+  --clr-primary: hsl(200, 28%, 29%);
+  --clr-secondary: hsl(200, 35%, 68%);
+  --clr-secondary-light: hsl(200, 35%, 80%);
+  --clr-accent: hsl(200, 39%, 41%);
+
+  --fs-900: 4.21em;
+  --fs-800: 3.16em;
+  --fs-700: 2.37em;
+  --fs-600: 1.77em;
+  --fs-500: 1.33em;
+  --fs-400: 1em;
+  --fs-300: 0.75em;
+}
+
+/* --- UTILS --- */
+
+.text-xxl {
+  font-size: var(--fs-900);
+}
+.text-xl {
+  font-size: var(--fs-800);
+}
+.text-lg {
+  font-size: var(--fs-700);
+}
+.text-md {
+  font-size: var(--fs-600);
+}
+.text-sm {
+  font-size: var(--fs-500);
+}
+.text-xs {
+  font-size: var(--fs-400);
+}
+.text-xxs {
+  font-size: var(--fs-300);
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+.flow-left > * + * {
+  margin-left: var(--flow-space, 1em);
+}
+.container {
+  padding: 0 8.3vw;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-background);
+  background: var(--clr-primary);
+  padding: 1em 4em;
+}
+.btn-secondary {
+  color: var(--clr-text);
+  background: var(--clr-secondary);
+}
+
+a {
+  font-weight: 300;
+  text-decoration: none;
+  color: var(--clr-text);
+}
+
+/* --- GENERAL STYLING --- */
+body {
+  font-family: "Ubuntu Mono";
+  font-weight: 400;
+  background-color: var(--clr-background);
+  color: var(--clr-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Gantari";
+  font-weight: 700;
+}
+p {
+  max-width: 60ch;
+}
+.content-block {
+  margin: auto;
+  background-color: var(--clr-secondary-light);
+  color: var(--clr-text);
+  border-radius: var(--fs-300);
+  padding: 1em;
+}
+/* .content-block h2 {
+  padding-bottom: 0.2em;
+} */
+.content-block-alt {
+  margin: auto;
+  background-color: var(--clr-text-light);
+  border-radius: var(--fs-300);
+  margin-top: 1em;
+  padding: 1em;
+}
+.content-block-alt-2 {
+  margin: auto;
+  background-color: var(--clr-primary);
+  color: var(--clr-background);
+  border-radius: var(--fs-300);
+  margin-top: 1em;
+  padding: 1em;
+}
+.code-block {
+  margin: auto;
+  background-color: var(--clr-text);
+  color: var(--clr-background);
+  border-radius: var(--fs-300);
+  margin-top: 1em;
+  padding: 1em;
+}
+
+/* === HEADER === */
+
+header {
+  border-bottom: solid 0.5px var(--clr-accent);
+}
+header .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+header .logo {
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+}
+header .logo img {
+  object-fit: cover;
+}
+
+/* === NAV === */
+.nav {
+  height: var(--fs-900);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nav a {
+  font-size: var(--fs-400);
+}
+
+/* DOM Page */
+.content-block-alt {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1em;
+}
+@media (max-width: 40em) {
+  .content-block-alt {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

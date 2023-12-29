@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Concepts</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      h4 {
+        position: relative;
+      }
+      .gif {
+        cursor: pointer;
+        width: 15ch;
+        height: auto;
+        position: absolute;
+        top: -15ch;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a class="logo flow-left" href="index.html"
+          ><img
+            style="width: 30px; height: 30px"
+            src="/Testing/res/logos.png"
+            alt=""
+          />
+          <span>Personal Notes</span>
+        </a>
+        <nav class="nav flow-left">
+          <a href="/Testing/dom.html">DOM</a>
+          <a href="/Testing/array.html">Array</a>
+          <a href="/Testing/object.html">Object</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <h1 class="text-xl">DOM Notes</h1>
+      </div>
+    </main>
+    <section>
+      <div class="container">
+        <div class="content-block flow">
+          <h2>Event Type</h2>
+          <div class="content-block-alt" id="ex1">
+            <div class="col flow">
+              <h3>Input & Change</h3>
+              <p id="input">This paragraph can be changed if input is filled</p>
+              <form action="#">
+                <input type="text" class="input" />
+              </form>
+            </div>
+            <div class="col">
+              <div class="content-block-alt-2">
+                <p>
+                  - Input event is detected as data in forms is being changed
+                </p>
+              </div>
+              <div class="content-block-alt-2">
+                <p>- Change event is detected as form is modified and exited</p>
+              </div>
+            </div>
+          </div>
+          <div class="code-block">
+            <p>===Input===</p>
+            <p>input.addEventListener(&quot;input&quot;, (e) =&gt; {&nbsp;</p>
+            <p>para.innerHTML = `You pressed &quot;${e.data}&quot;`;</p>
+            <p>&nbsp;});</p>
+            <p>===Change===</p>
+            <p>input.addEventListener(&quot;change&quot;, (e) =&gt; {&nbsp;</p>
+            <p>
+              para.innerHTML = `Current Value is &quot;${input.value}&quot;`;
+            </p>
+            <p>&nbsp;});</p>
+          </div>
+          <div class="content-block-alt" id="ex2">
+            <div class="col flow">
+              <h3>Mouse</h3>
+              <h4>Hover to see gif</h4>
+              <button>Click to Expand</button>
+            </div>
+            <div class="col">
+              <div class="content-block-alt-2">
+                <p>
+                  - Input event is detected as data in forms is being changed
+                </p>
+              </div>
+              <div class="content-block-alt-2">
+                <p>- Change event is detected as form is modified and exited</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="dom.js"></script>
+  </body>
+</html>

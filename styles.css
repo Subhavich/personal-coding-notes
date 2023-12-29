@@ -103,13 +103,23 @@ colors=e1e7eb-070a0b-a0bdcb-365c6f-6ea4c0&fonts=Poppins-Poppins */
 }
 .btn {
   display: inline-block;
+  position: relative;
   text-decoration: none;
   color: var(--clr-background);
-  background: var(--clr-primary);
+  background: var(--clr-secondary-light);
   padding: 0.75em 2em;
   border: none;
   border-radius: 0.5em;
   cursor: pointer;
+  font-family: "Gantari";
+  transition: all 0.3s linear;
+}
+
+.btn:hover {
+  /* background-color: var(--clr-accent); */
+  transform: translate(0.2em, -0.2em);
+  color: var(--clr-primary);
+  box-shadow: -0.5em 0.5em 0px var(--clr-primary);
 }
 
 .btn-secondary {
@@ -174,6 +184,22 @@ p {
   border-radius: var(--fs-300);
   margin-top: 1em;
   padding: 1em;
+}
+.container-block-outline {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-image: radial-gradient(
+    circle at center,
+    var(--clr-secondary) 20%,
+    transparent 20%
+  );
+  background-size: 8px 8px;
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 /* === HEADER === */

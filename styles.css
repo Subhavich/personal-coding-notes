@@ -163,16 +163,7 @@ p {
 /* .content-block h2 {
   padding-bottom: 0.2em;
 } */
-h4 {
-  position: relative;
-}
-.gif {
-  cursor: pointer;
-  width: 15ch;
-  height: auto;
-  position: absolute;
-  top: -15ch;
-}
+
 .content-block-alt {
   margin: auto;
   background-color: var(--clr-text-light);

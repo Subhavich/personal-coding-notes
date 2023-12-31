@@ -10,19 +10,34 @@ input.addEventListener("change", (e) => {
 
 // hover
 const hover = document.querySelector("#ex2 h4");
-hover.addEventListener("mouseover", () => {
+const link = "giphy";
+
+function mouseEnter() {
   const gif = document.createElement("img");
   gif.classList.add("gif");
-  gif.src = "/Testing/res/giphy.gif";
+  gif.src = `/Testing/res/${link}.gif`;
   hover.appendChild(gif);
   document.documentElement.style.cursor = "pointer";
-});
-hover.addEventListener("mouseout", () => {
+}
+function mouseMove(e) {
+  const gif = document.querySelector(".gif");
+  // gif.style.transform = `translateX(${e.screenX * 0.15 - gif.width * 0.9}px)`;
+  gif.style.transform = `translateX(${e.offsetX - gif.width / 4}px)`;
+}
+function mouseOut(e) {
   hover.removeChild(hover.firstElementChild);
   document.documentElement.style.cursor = "default";
-});
+}
+
+hover.addEventListener("mouseenter", mouseEnter);
+hover.addEventListener("mousemove", mouseMove);
+hover.addEventListener("mouseout", mouseOut);
 
 const btnChange = document.querySelector("#ex2 button");
-btnChange.addEventListener("click", () => {
-  btnChange.classList.toggle("text-lg");
-});
+function btnClick(e) {
+  this.classList.toggle("text-lg");
+}
+// btnChange.addEventListener("click", () => {
+//   btnChange.classList.toggle("text-lg");
+// });
+btnChange.addEventListener("click", btnClick);

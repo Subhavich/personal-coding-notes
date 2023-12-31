@@ -1,0 +1,7 @@
+.gif {
+  cursor: pointer;
+  width: 15ch;
+  height: auto;
+  position: absolute;
+  top: -15ch;
+}

@@ -15,7 +15,7 @@ const link = "giphy";
 function mouseEnter() {
   const gif = document.createElement("img");
   gif.classList.add("gif");
-  gif.src = `/Testing/res/${link}.gif`;
+  gif.src = `./res/${link}.gif`;
   hover.appendChild(gif);
   document.documentElement.style.cursor = "pointer";
 }
